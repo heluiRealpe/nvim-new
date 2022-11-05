@@ -50,13 +50,15 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'
   use "akinsho/toggleterm.nvim"
+  use "ahmedkhalf/project.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
   
   -- File Explorer
   use 'kyazdani42/nvim-tree.lua'
 
   -- Comment
   use "numToStr/Comment.nvim"
-  use "folke/todo-comments.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -67,19 +69,20 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "lvimuser/lsp-inlayhints.nvim"
+  use "RRethy/vim-illuminate"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -89,14 +92,9 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "p00f/nvim-ts-rainbow"
-  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-
-  -- Diagnostics
-  use "folke/trouble.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
